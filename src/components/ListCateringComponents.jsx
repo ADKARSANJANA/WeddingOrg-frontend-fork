@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 //import CateringService from '../Service/CateringServices';
 import CateringService from '../services/CateringService';
+import Navigation from './Navigation';
 //import { Button } from 'react-bootstrap';
 import axios from 'axios';
+
 
 
 class ListCateringComponents extends Component {
@@ -44,6 +46,7 @@ deleteCatering = (id) => {
     render() {
         return (
             <div>
+                <Navigation/>
                 <h2 className="text-center">Catering List</h2>
                   
                       <button  className="btn btn-primary" onClick={this.addCatering} style={{marginTop: "20px"}}>Add Catering</button>

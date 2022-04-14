@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import VenueService from '../services/VenueService';
 //import { Button } from 'react-bootstrap';
 import axios from 'axios';
+import Navigation from './Navigation';
 
 
 class ListVenueComponent extends Component {
@@ -46,6 +47,7 @@ deleteVenue = (id) => {
     render() {
         return (
             <div>
+                <Navigation/>
                 <h2 className="text-center">Venue List</h2>
                   
                       <button  className="btn btn-primary" onClick={this.addVenue}style={{marginTop: "20px"}}>Add Venue</button>

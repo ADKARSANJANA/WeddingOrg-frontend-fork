@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import VenueService from '../services/VenueService';
 //import { ToastContainer, toast } from 'react-toastify';
 //import 'react-toastify/dist/ReactToastify.css';
+import Navigation from './Navigation';
 
 class CreateVenueComponent extends Component {
     constructor(props){
@@ -52,7 +53,7 @@ class CreateVenueComponent extends Component {
     render() {
         return (
             <div>
-                
+                <Navigation/>
                
 
               <div className="container">

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import DecorService from '../services/DecorService';
-
+import Navigation from './Navigation';
 
 class CreateDecorComponent extends Component {
     constructor(props){
@@ -44,7 +44,7 @@ class CreateDecorComponent extends Component {
         return (
             <div>
                 
-               
+               <Navigation/>
 
               <div className="container">
                   <div className="row">

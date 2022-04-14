@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import VenueService from '../services/VenueService';
+import Navigation from './Navigation';
 
 class UpdateVenueComponent extends Component {
     constructor(props){
@@ -56,6 +57,7 @@ class UpdateVenueComponent extends Component {
     render() {
         return (
             <div>
+                <Navigation/>
               <div className="container">
                   <div className="row">
                       <div className= "card col-md-6 offset-md-3 offset-md-3" style={{marginTop: "100px"}}>

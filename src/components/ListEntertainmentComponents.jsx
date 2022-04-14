@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import EntertainmentService from '../services/EntertainmentService';
 //import { Button } from 'react-bootstrap';
 import axios from 'axios';
+import Navigation from './Navigation';
 
 
 class ListEntertainmentComponents extends Component {
@@ -44,6 +45,7 @@ deleteEntertainment = (id) => {
     render() {
         return (
             <div>
+                <Navigation/>
                 <h2 className="text-center">Entertainment List</h2>
                   
                       <button  className="btn btn-primary" onClick={this.addEntertainment} style={{marginTop: "20px"}}>Add Entertainment</button>

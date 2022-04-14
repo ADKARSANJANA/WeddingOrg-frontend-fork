@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import React from 'react';
 import './App.css';
-import  {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Date from './Customerflow/Date';
+import  {BrowserRouter as Router, Route, Switch,Routes} from 'react-router-dom';
 import ListCateringComponents from './components/ListCateringComponents';
 import CreateCateringComponent from './components/CreateCateringComponent';
 import Updatecateringcomponent from './components/UpdateCateringComponent';
@@ -17,30 +18,39 @@ import CreateEntertainmentComponent from './components/CreateEntertainmentCompon
 import UpdateEntertainmentComponent from './components/UpdateEntertainmentComponent';
 import Footer from './components/Footer';
 import Home from './components/Home';
+import Chome from './Customerflow/Chome';
+import CateringCustomer from './Customerflow/CateringCustomer';
+import DecorCustomer from './Customerflow/DecorCustomer';
 import Signin from './User/Signin';
 import SignUp from './User/Signup';
-import CustomerHome from './Customer/CustomerHomePage';
+import CustomerHome from './Customerflow/CustomerHomePage';
+import EntertainmentCustomer from './Customerflow/EntertainmentCustomer';
+import VenueCustomer from './Customerflow/VenueCustomer';
+import CustomerSelections from './Customerflow/CustomerSelections';
+
+
 import AdminHome from './Admin/AdminHomePage';
-import Date from './CustomerFlow/Date'
+
 function App() {
   return (
     <div>
       <Router>
       <div className = "container">
-        <Navigation/>
+        
         <Switch>
         <Route path="/" exact component={Signin}></Route>
             <Route path="/signin" exact component={Signin}></Route>
             <Route path="/signup" component={SignUp}></Route>
             <Route
-              path="/home"
+              path="/chome"
               component={CustomerHome}
             ></Route>
             <Route
               path="/admin"
               component={Home}
-            ></Route>            
-          
+            ></Route>  
+        
+          {/* <Route path = "/" exact component = {Home}></Route> */}
           <Route path = "/caterings" component = {ListCateringComponents}></Route>
           <Route path = "/addCatering" component = {CreateCateringComponent}></Route>
           <Route path = "/editCatering/:id" component={Updatecateringcomponent}></Route>
@@ -55,14 +65,20 @@ function App() {
           <Route path = "/entertainments" component = {ListEntertainmentComponents}></Route>
           <Route path = "/addEntertainment" component = {CreateEntertainmentComponent}></Route>
           <Route path = "/editEntertainment/:id" component={UpdateEntertainmentComponent}></Route>
-          <Route path = "/date" component={Date}></Route>
-          
-          
+          <Route path = "/date"component={Date}></Route>     
+          <Route path= "/chome" exact component = {Chome}></Route>
+          <Route path= "/catering" exact component = {CateringCustomer}></Route>   
+          <Route path= "/decor" exact component = {DecorCustomer}></Route> 
+          <Route path= "/entertainment" exact component = {EntertainmentCustomer}></Route> 
+          <Route path= "/venue" exact component = {VenueCustomer}></Route>
+          <Route
+              path="/cart"
+              component={CustomerSelections}
+            ></Route>
         </Switch>
       </div> 
       </Router>
       <Footer/>
-      
     </div>
   );
 }

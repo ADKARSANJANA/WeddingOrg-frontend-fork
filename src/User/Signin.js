@@ -7,11 +7,15 @@ import CateringService from '../services/CateringService';
 import { useHistory } from 'react-router-dom';
 import { render } from 'react-dom';
 import UserSignUpLoginService from '../services/UserSignUpLoginService';
+import Chome from  '../Customerflow/Chome';
 
 const Signin = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    
     const history = useHistory();
+    
+    
 
     const signinUser = () => {
         if (email.length === 0) {
@@ -22,10 +26,13 @@ const Signin = () => {
             UserSignUpLoginService.login({'email':email,'password':password}).then(res =>{
               console.log(res.status);
               if(res.status === 200 || res.status === 201){
-                if(res.data.data.roles === "ADMIN"){
+               
+                 if(res.data.email === "suyog18@gmail.com"){
+                  // navigate("/chome");
                   history.push("/admin");
                 }else{
-                  history.push("/home");
+                  history.push("/chome");
+                  //navigate("/admin");
                 }
               }else{
                 alert('login failed');

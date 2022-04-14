@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import DecorService from '../services/DecorService';
 //import { Button } from 'react-bootstrap';
 import axios from 'axios';
+import Navigation from './Navigation';
 
 
 class ListDecorComponents extends Component {
@@ -44,6 +45,7 @@ deleteDecor = (id) => {
     render() {
         return (
             <div>
+                <Navigation/>
                 <h2 className="text-center">Decor List</h2>
                   
                       <button  className="btn btn-primary" onClick={this.addDecor} style={{marginTop: "20px"}}>Add Decor</button>

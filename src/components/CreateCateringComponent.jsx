@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CateringService from '../services/CateringService';
+import Navigation from './Navigation';
 
 
 class CreateCateringComponent extends Component {
@@ -43,7 +44,7 @@ class CreateCateringComponent extends Component {
     render() {
         return (
             <div>
-                
+                <Navigation/>
                
 
               <div className="container">
