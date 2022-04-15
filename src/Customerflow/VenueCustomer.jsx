@@ -42,8 +42,9 @@ export default class VenueCustomer extends Component {
            // e.preventDefault();
             let venue= {venue:this.state.venues};
             console.log('venue =>' + JSON.stringify(venue));
+            alert("Venue Selected Successfully");
              
-           venueCustService.selectvenue(venue).then(res =>{
+           venueCustService.addVenue(venue).then(res =>{
                this.props.history.push('/selectvenue')
               
               

@@ -17,6 +17,7 @@ class CreateEntertainmentComponent extends Component {
         e.preventDefault();
         let entertainment = {entItem: this.state.entItem, price :this.state.price};
         console.log('entertainment =>' + JSON.stringify(entertainment));
+        alert("Entertainment Added Successfully");
 
         EntertainmentService.createEntertainment(entertainment).then(res =>{
            this.props.history.push('/entertainments')

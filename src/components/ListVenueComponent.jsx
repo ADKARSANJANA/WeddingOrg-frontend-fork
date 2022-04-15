@@ -35,6 +35,7 @@ deleteVenue = (id) => {
             if(response.data != null) {
                 
                 this.setState({"show":true});
+                alert("Deleted Successfully");
                 setTimeout(() => this.setState({"show":false}), 3000);
                 this.setState({
                     venues: this.state.venues.filter(venue => venue.id !== id)

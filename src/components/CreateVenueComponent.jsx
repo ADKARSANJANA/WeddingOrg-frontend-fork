@@ -23,6 +23,7 @@ class CreateVenueComponent extends Component {
         e.preventDefault();
         let venue = {venueName: this.state.venueName, price :this.state.price, city:this.state.city};
         console.log('venue =>' + JSON.stringify(venue));
+        alert("Venue Added Successfully");
 
         VenueService.createVenue(venue).then(res =>{
            this.props.history.push('/allVenues')

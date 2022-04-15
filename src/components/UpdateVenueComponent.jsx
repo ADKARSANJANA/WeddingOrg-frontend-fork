@@ -29,6 +29,7 @@ class UpdateVenueComponent extends Component {
         e.preventDefault();
         let venue = {venueName: this.state.venueName, price :this.state.price, city: this.state.city};
         console.log('venue =>' + JSON.stringify(venue));
+        alert("Venue Updated Successfully");
 
         VenueService.updateVenue(venue,this.state.id).then(res => {
         this.props.history.push('/allVenues')

@@ -20,6 +20,7 @@ class CreateCateringComponent extends Component {
         e.preventDefault();
         let catering = {foodItem: this.state.foodItem, price :this.state.price};
         console.log('catering =>' + JSON.stringify(catering));
+        alert("Food Added Successfully");
 
         CateringService.createCatering(catering).then(res =>{
            this.props.history.push('/caterings')

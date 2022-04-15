@@ -42,7 +42,7 @@ export default class DecorCustomer extends Component {
            // e.preventDefault();
             let decor= {decor:this.state.decors};
             console.log('decor =>' + JSON.stringify(decor));
-             
+            alert("Decor Items added Successfully")
            decorCustService.selectdecor(decor).then(res =>{
                this.props.history.push('/selectdecor')
               

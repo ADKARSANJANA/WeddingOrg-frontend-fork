@@ -33,6 +33,7 @@ deleteDecor = (id) => {
         .then(response => {
             if(response.data != null) {
                 this.setState({"show":true});
+                alert("Deleted Successfully");
                 setTimeout(() => this.setState({"show":false}), 3000);
                 this.setState({
                     decors: this.state.decors.filter(decor => decor.id !== id)

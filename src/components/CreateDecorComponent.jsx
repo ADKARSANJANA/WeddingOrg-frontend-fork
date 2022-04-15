@@ -19,6 +19,7 @@ class CreateDecorComponent extends Component {
         e.preventDefault();
         let decor = {decorItem: this.state.decorItem, price :this.state.price};
         console.log('decor =>' + JSON.stringify(decor));
+        alert("Decor Added Successfully");
 
         DecorService.createDecor(decor).then(res =>{
            this.props.history.push('/decors')

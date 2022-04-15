@@ -14,7 +14,7 @@ class CateringService{
  
 
 customerDate(){
-  return axios.post(DATE_URL);
+  return axios.post(DATE_URL,localStorage.getItem("user"));
 }
 
   createCatering(catering){

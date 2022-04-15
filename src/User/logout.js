@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import React from 'react';
 const Logout =()=> {
+    localStorage.setItem("user",'');
     return(
         <section>
         <div className="container">

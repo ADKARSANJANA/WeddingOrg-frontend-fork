@@ -43,6 +43,7 @@ export default class CateringCustomer extends Component {
            // e.preventDefault();
             let catering= {catering:this.state.caterings};
             console.log('catering =>' + JSON.stringify(catering));
+            alert("Catering Items added Successfully")
              
            cateringCustService.selectcatering(catering).then(res =>{
                this.props.history.push('/selectcatering')

@@ -30,6 +30,7 @@ export default class EntertainmentCustomer extends Component {
             e.preventDefault();
             let entertainment= {entertainment:this.state.entertainments};
             console.log('entertainment =>' + JSON.stringify(entertainment));
+          
              
            entertainCustService.addentertain(entertainment).then(res =>{
                this.props.history.push('/addentertainment')
@@ -42,6 +43,7 @@ export default class EntertainmentCustomer extends Component {
            // e.preventDefault();
             let entertainment= {entertainment:this.state.entertainments};
             console.log('entertainment =>' + JSON.stringify(entertainment));
+            alert("Entertainment Items added Successfully");
              
            entertainCustService.selectentertain(entertainment).then(res =>{
                this.props.history.push('/selectentertainment')

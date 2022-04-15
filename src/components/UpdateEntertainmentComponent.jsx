@@ -26,6 +26,7 @@ class UpdateEntertainmentComponent extends Component {
         e.preventDefault();
         let entertainment = {entItem: this.state.entItem, price :this.state.price};
         console.log('entertainment =>' + JSON.stringify(entertainment));
+        alert("Entertainment Updated Successfully");
 
         EntertainmentService.updateEntertainment(entertainment,this.state.id).then(res => {
         this.props.history.push('/entertainments')

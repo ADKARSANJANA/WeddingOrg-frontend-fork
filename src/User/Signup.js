@@ -28,7 +28,7 @@ const Signup = () => {
           { "Content-Type": "application/json" }
         )
         .then((Response) => {
-          console.log(Response, "rohan");
+          alert("Registerd Sucessfully")
           history.push("/signin");
         });
     }
@@ -75,13 +75,13 @@ const Signup = () => {
 
                     <div class="col-auto">
                       <label for="inputPassword2" class="visually-hidden">
-                        FirstName
+                        First Name
                       </label>
                       <input
                         type="text"
                         class="form-control"
                         id="inputPassword2"
-                        placeholder="FirstName"
+                        placeholder="Enter First Name"
                         onChange={(e) => {
                           setFirstName(e.target.value);
                         }}
@@ -117,7 +117,7 @@ const Signup = () => {
                     </div>
                     <div class="col-auto">
                       <label for="inputPassword2" class="visually-hidden">
-                        PhoneNo
+                        Phone No
                       </label>
                       <input
                         type="text"

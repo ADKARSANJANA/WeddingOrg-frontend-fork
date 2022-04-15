@@ -14,6 +14,7 @@ const Signin = () => {
     const [password, setPassword] = useState('');
     
     const history = useHistory();
+   
     
     
 
@@ -26,6 +27,8 @@ const Signin = () => {
             UserSignUpLoginService.login({'email':email,'password':password}).then(res =>{
               console.log(res.status);
               if(res.status === 200 || res.status === 201){
+               localStorage.setItem('user',res.data);
+               
                
                  if(res.data.email === "suyog18@gmail.com"){
                   // navigate("/chome");
@@ -37,7 +40,7 @@ const Signin = () => {
               }else{
                 alert('login failed');
               }             
-              
+              console.log(localStorage.getItem('user'));
            });
         }
 

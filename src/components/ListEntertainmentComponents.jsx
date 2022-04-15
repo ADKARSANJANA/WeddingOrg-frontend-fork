@@ -33,6 +33,7 @@ deleteEntertainment = (id) => {
         .then(response => {
             if(response.data != null) {
                 this.setState({"show":true});
+                alert("Deleted Successfully");
                 setTimeout(() => this.setState({"show":false}), 3000);
                 this.setState({
                     entertainments: this.state.entertainments.filter(entertainment => entertainment.id !== id)

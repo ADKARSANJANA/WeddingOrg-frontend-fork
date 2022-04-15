@@ -26,6 +26,7 @@ class Updatecateringcomponent extends Component {
         e.preventDefault();
         let catering = {foodItem: this.state.foodItem, price :this.state.price};
         console.log('catering =>' + JSON.stringify(catering));
+        alert("Catering updated Successfully");
 
         CateringService.updateCatering(catering,this.state.id).then(res => {
         this.props.history.push('/caterings')
